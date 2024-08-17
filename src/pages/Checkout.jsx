@@ -34,8 +34,6 @@ function Checkout() {
       setLoading(false); // Stop loader
       setPurchased(true);
     }, 2000);
-
-    setCart([]);
   };
 
   return (
