@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { FaSearch } from "react-icons/fa";
-import axios from "axios";
+import axios from "https://cdn.skypack.dev/axios";
 import { useNavigate } from "react-router-dom";
 import { BookContext } from "../context/BookContext";
 

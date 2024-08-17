@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
-import axios from "axios";
+import axios from "https://cdn.skypack.dev/axios";
 import Lottie from "lottie-react";
 import Header from "../components/Header";
 import Loading from "../assets/imgs/loading.json";

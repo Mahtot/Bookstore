@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import axios from "axios";
+import axios from "https://cdn.skypack.dev/axios";
 import Loading from "../assets/imgs/loading.json";
 import Lottie from "lottie-react";
 import Card from "../components/Card";
