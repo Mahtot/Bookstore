@@ -64,7 +64,7 @@ function Header({ page }) {
             }
             onClick={handleLinksClick}
           >
-            Home
+            <h3>Home</h3>
           </NavLink>
           <h3>
             <NavLink
@@ -112,7 +112,7 @@ function Header({ page }) {
           >
             <p
               className={`absolute top-[-10px] ${
-                page ? "right-[30px] " : "right-[0px] "
+                page ? "right-[0px] " : "right-[0px] "
               } md:right-[-10px] bg-[#F3E998] text-black rounded-full w-6 h-6 flex items-center justify-center font-bold`}
             >
               {cart.length}

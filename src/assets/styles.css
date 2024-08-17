@@ -18,9 +18,10 @@
   }
 
   @media screen and (max-width:767px) {
-    .home h3{
-      text-align: left;
-       width: 100px;
+    .navigator h3{
+      /* text-align: justify; */
+      /* border:1px solid red; */
+       width: 50px;
   
     }
   }
