@@ -32,7 +32,7 @@ function SearchResults() {
           <h1 className=" font-mono font-bold text-[#93622A] text-[24px] 785:text-4xl mb-5 p-5">
             Search results
           </h1>
-          <div className="grid grid-cols-2 785:grid-cols-4 gap-5 p-4">
+          <div className="grid grid-cols-1 785:grid-cols-4 gap-5 p-4">
             {searchedBooks.map((item, index) => {
               const thumbnail = item.volumeInfo?.imageLinks?.smallThumbnail;
 
