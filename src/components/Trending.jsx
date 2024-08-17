@@ -10,10 +10,13 @@ function Trending() {
   const [displayBooks, setDisplayBooks] = useState([]);
   const [isLoading, setIsloading] = useState(true);
 
+  // api for google book
+  const googleBookApiKey = import.meta.env.VITE_GOOGLE_BOOK_API_KEY;
+
   useEffect(() => {
     axios
       .get(
-        "https://www.googleapis.com/books/v1/volumes?q=trending&key=AIzaSyANdzSfMHN7iRIQtPrZaXrvjTQldrd8G5o&maxResults=10"
+        `https://www.googleapis.com/books/v1/volumes?q=trending&key=${googleBookApiKey}&maxResults=10`
       )
       .then((response) => {
         const books = response.data.items || [];

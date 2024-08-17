@@ -27,11 +27,14 @@ function BookDetail() {
   const [addedToWishlist, setAddedToWishlist] = useState(false);
   const [inCart, setInCart] = useState(false);
 
+  // api for google book
+  const googleBookApiKey = import.meta.env.VITE_GOOGLE_BOOK_API_KEY;
+
   useEffect(() => {
     if (value) {
       axios
         .get(
-          `https://www.googleapis.com/books/v1/volumes?q=${value}&key=AIzaSyANdzSfMHN7iRIQtPrZaXrvjTQldrd8G5o&maxResults=1`
+          `https://www.googleapis.com/books/v1/volumes?q=${value}&key=${googleBookApiKey}&maxResults=10`
         )
         .then((response) => {
           setBook(response.data.items ? response.data.items[0] : null);

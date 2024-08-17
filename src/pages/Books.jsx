@@ -11,11 +11,14 @@ function Books() {
   const [isLoading, setIsloading] = useState(true);
   const [displayBooks, setDisplayBooks] = useState([]);
 
+  // api for google book
+  const googleBookApiKey = import.meta.env.VITE_GOOGLE_BOOK_API_KEY;
+
   useEffect(() => {
     setIsloading(true);
     axios
       .get(
-        `https://www.googleapis.com/books/v1/volumes?q=${value}&key=AIzaSyANdzSfMHN7iRIQtPrZaXrvjTQldrd8G5o&maxResults=10`
+        `https://www.googleapis.com/books/v1/volumes?q=${value}&key=${googleBookApiKey}&maxResults=10`
       )
       .then((response) => {
         const books = response.data.items || [];
