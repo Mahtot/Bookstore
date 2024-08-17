@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/Inter/inter.ttf') format('truetype'); 
+  }
+
+  .home{
+    background:url('./imgs/bgF.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .home h3:hover{
+    
+    cursor: pointer;
+  }
+
+  @media screen and (max-width:767px) {
+    .home h3{
+      text-align: left;
+       width: 100px;
+  
+    }
+  }
+ 
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+
+  .fo{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .trending{
+    background: url('../assets/imgs/bg3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .book:hover .arrow{
+    position: relative;
+    translate: 5px;
+    transition: all 0.5s;
+  }
+
+  .card:hover .author{
+     color:white;
+  }
+
+ 
