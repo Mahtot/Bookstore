@@ -85,7 +85,11 @@ function BookDetail() {
   };
 
   return (
-    <div className={`flex flex-col gap-10 ${book ? "bg-gray-100" : ""} w-full`}>
+    <div
+      className={`flex flex-col gap-10 ${
+        book && book.volumeInfo?.description ? "bg-gray-100" : ""
+      } w-full`}
+    >
       <Header />
       {isLoading ? (
         <div
@@ -94,7 +98,7 @@ function BookDetail() {
         >
           <Lottie loop={true} animationData={Loading} />
         </div>
-      ) : book ? (
+      ) : book && book.volumeInfo?.description ? (
         <div className="flex flex-col items-center 531:w-[80vw] justify-center mx-auto mt-10">
           <div className="flex flex-row items-center justify-center gap-2 531:gap-10  992:w-[50vw] mx-auto p-4 ">
             <img
@@ -116,7 +120,7 @@ function BookDetail() {
             <div className="flex flex-col 344:flex-row mb-[50px] font-inter self-end gap-10 items-center w-full 785:w-auto mt-[50px] 785:mt-0 justify-center">
               <a
                 href={book.volumeInfo.previewLink}
-                className="bg-[#93622A] text-white p-2 rounded-3xl px-10 opacity-80 hover:opacity-100 transition-opacity"
+                className="bg-[#93622A] text-white p-2  rounded-3xl px-5 opacity-80 hover:opacity-100 transition-opacity"
               >
                 Start reading
               </a>
@@ -174,8 +178,7 @@ function BookDetail() {
       ) : (
         <p className="text-center text-gray-500">No book found.</p>
       )}
-
-      <Footer />
+      {book && book.volumeInfo?.description ? <Footer /> : ""}
     </div>
   );
 }

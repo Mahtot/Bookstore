@@ -16,7 +16,7 @@ function Trending() {
   useEffect(() => {
     axios
       .get(
-        `https://www.googleapis.com/books/v1/volumes?q=trending&key=${googleBookApiKey}&maxResults=10`
+        `https://www.googleapis.com/books/v1/volumes?q=love&key=${googleBookApiKey}&maxResults=10`
       )
       .then((response) => {
         const books = response.data.items || [];
@@ -50,7 +50,7 @@ function Trending() {
           {displayBooks.map((item, index) => {
             const thumbnail = item.volumeInfo?.imageLinks?.smallThumbnail;
 
-            return thumbnail ? (
+            return thumbnail && item.volumeInfo?.description ? (
               <Card
                 key={index}
                 img={thumbnail}
