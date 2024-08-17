@@ -33,7 +33,7 @@ To set up this project locally, follow these steps:
     ```bash
     VITE_GOOGLE_BOOK_API_KEY=your_google_books_api_key
 4. **Run the Development Server**
-  ```bash
-    npm run dev
+     ```bash
+       npm run dev
 
 
