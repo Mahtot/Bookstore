@@ -34,6 +34,6 @@ To set up this project locally, follow these steps:
     VITE_GOOGLE_BOOK_API_KEY=your_google_books_api_key
 4. **Run the Development Server**
   ```bash
-  npm run dev
+    npm run dev
 
 
